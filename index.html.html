@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packaging Piramidal Studio — Suite Técnica de Diseño y Costos</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              kraft: {
+                50: '#FAF8F5',
+                100: '#F3EFE8',
+                200: '#E5DDD0',
+                300: '#D2C4AE',
+                400: '#B8A284',
+                500: '#9E8260',
+                600: '#826749',
+                700: '#68513A',
+                800: '#4E3D2C',
+                900: '#362A1F',
+              },
+              terracotta: {
+                500: '#C85A32',
+                600: '#B04823',
+              },
+              blueprint: {
+                500: '#2563EB',
+                600: '#1D4ED8',
+                50: '#EFF6FF',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .blueprint-grid {
+        background-color: #FAF8F5;
+        background-image:
+          linear-gradient(to right, rgba(158, 130, 96, 0.11) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(158, 130, 96, 0.11) 1px, transparent 1px);
+        background-size: 22px 22px;
+      }
+    </style>
+  </head>
+  <body class="bg-kraft-100 text-kraft-900 min-h-screen flex flex-col antialiased selection:bg-terracotta-500 selection:text-white">
+    <!-- Notificación Toast para copiar correo -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+      <div class="bg-kraft-900 text-kraft-50 px-5 py-3 rounded-xl shadow-lg flex items-center gap-3 border border-kraft-700">
+        <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M5 13l4 4L19 7"></path> </svg> <span id="toast-message" class="text-sm font-medium">Correo
+          copiado al portapapeles</span> </div>
+    </div>
+    <!-- Header Superior -->
+    <header class="bg-kraft-50 border-b border-kraft-200 sticky top-0 z-30 shadow-sm">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-terracotta-500 text-white flex items-center justify-center shadow-sm">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 2L2 19h20L12 2zm0 4.5L18.5 17h-13L12 6.5z"></path> </svg>
+          </div>
+          <div> <span class="text-lg sm:text-xl font-bold tracking-tight text-kraft-900 block leading-tight">Packaging
+              Piramidal Studio</span> <span class="text-xs text-kraft-600 block">Suite
+              integral de ingeniería, troqueles y presupuestación</span> </div>
+        </div>
+        <nav class="flex items-center gap-2 sm:gap-3"> <a href="#herramientas"
+            class="px-3.5 py-2 text-xs sm:text-sm font-medium text-kraft-800 hover:bg-kraft-200/70 rounded-xl transition-colors">
+            Herramientas </a> <a href="#flujo-trabajo" class="hidden sm:inline-block px-3.5 py-2 text-xs sm:text-sm font-medium text-kraft-800 hover:bg-kraft-200/70 rounded-xl transition-colors">
+            Flujo de Trabajo </a> <a href="#contacto" class="px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-terracotta-500 hover:bg-terracotta-600 rounded-xl transition-colors shadow-sm">
+            Contacto </a> </nav>
+      </div>
+    </header>
+    <!-- Hero Técnico con Cuadrícula Milimetrada -->
+    <section class="blueprint-grid border-b border-kraft-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-kraft-300 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-terracotta-500"></span> <span
+                class="text-xs font-mono font-semibold text-kraft-800">SISTEMA
+                MODULAR DE PACKAGING ESTRUCTURAL</span> </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-kraft-900 leading-[1.15]">
+              Calculá, troquelá y presupuestá envases piramidales con precisión
+              milimétrica. </h1>
+            <p class="text-sm sm:text-base text-kraft-700 leading-relaxed max-w-2xl">
+              Un ecosistema de tres aplicaciones conectadas entre sí para
+              diseñar bandejas apilables, calcular tapas encastrables (completas
+              o truncadas) y obtener presupuestos exactos de materiales y
+              producción. </p>
+            <div class="pt-1 flex flex-wrap items-center gap-3"> <a href="#herramientas"
+                class="px-5 py-3 text-sm font-semibold text-white bg-terracotta-500 hover:bg-terracotta-600 rounded-xl shadow-sm transition-all flex items-center gap-2">
+                <span>Explorar Aplicaciones</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path> </svg> </a> <a href="apps/calculadora%20packaging%20piramidal.html"
+                class="px-5 py-3 text-sm font-semibold text-kraft-900 bg-white hover:bg-kraft-50 border border-kraft-300 rounded-xl shadow-sm transition-all">
+                Iniciar por Bandejas → </a> </div>
+          </div>
+          <!-- Diagrama Técnico Decorativo SVG -->
+          <div class="lg:col-span-5">
+            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-5 border border-kraft-300 shadow-sm">
+              <div class="flex items-center justify-between pb-3 mb-3 border-b border-kraft-200">
+                <span class="text-xs font-mono font-bold text-kraft-800 uppercase">Esquema
+                  de Conjunto</span> <span class="text-[11px] font-mono bg-blueprint-50 text-blueprint-600 px-2 py-0.5 rounded border border-blue-200">Base
+                  + Tapa + Costos</span> </div>
+              <svg class="w-full h-56" viewBox="0 0 340 220" xmlns="http://www.w3.org/2000/svg">
+                <!-- Suelo -->
+                <line x1="25" y1="192" x2="315" y2="192" stroke="#9E8260" stroke-width="1.5"
+                  stroke-dasharray="4,3"></line>
+                <!-- Torre de 3 bandejas (izquierda) -->
+                <polygon points="45,192 145,192 135,164 55,164" fill="#F3EFE8" stroke="#4E3D2C"
+                  stroke-width="1.5"></polygon>
+                <polygon points="55,164 135,164 125,136 65,136" fill="#F3EFE8" stroke="#4E3D2C"
+                  stroke-width="1.5"></polygon>
+                <polygon points="65,136 125,136 115,108 75,108" fill="#F3EFE8" stroke="#4E3D2C"
+                  stroke-width="1.5"></polygon>
+                <text x="95" y="181" text-anchor="middle" fill="#4E3D2C" font-family="JetBrains Mono"
+                  font-size="8.5" font-weight="700">B1</text>
+                <text x="95" y="153" text-anchor="middle" fill="#4E3D2C" font-family="JetBrains Mono"
+                  font-size="8.5" font-weight="700">B2</text>
+                <text x="95" y="125" text-anchor="middle" fill="#4E3D2C" font-family="JetBrains Mono"
+                  font-size="8.5" font-weight="700">B3</text>
+                <text x="95" y="208" text-anchor="middle" fill="#68513A" font-family="JetBrains Mono"
+                  font-size="9" font-weight="600">01. Torre Interior</text>
+                <!-- Flecha de vinculación -->
+                <path d="M 150 148 L 178 148" stroke="#2563EB" stroke-width="1.6"
+                  stroke-dasharray="3,2"></path>
+                <polygon points="178,144 185,148 178,152" fill="#2563EB"></polygon>
+                <!-- Tapa piramidal encastrable (derecha) -->
+                <polygon points="195,192 301,192 248,44" fill="rgba(200, 90, 50, 0.12)"
+                  stroke="#C85A32" stroke-width="2" stroke-linejoin="round"></polygon>
+                <polygon points="198,192 298,192 268,108 228,108" fill="none" stroke="#68513A"
+                  stroke-width="1.1" stroke-dasharray="3,2.5"></polygon>
+                <rect x="235" y="76" width="26" height="6" rx="3" fill="#FAF8F5"
+                  stroke="#362A1F" stroke-width="1.3"></rect>
+                <text x="248" y="208" text-anchor="middle" fill="#C85A32" font-family="JetBrains Mono"
+                  font-size="9" font-weight="700">02. Tapa Encastrable</text>
+                <!-- Etiqueta superior derecha -->
+                <rect x="208" y="14" width="112" height="22" rx="6" fill="#362A1F"></rect>
+                <text x="264" y="28" text-anchor="middle" fill="#FAF8F5" font-family="JetBrains Mono"
+                  font-size="8.5" font-weight="600">03. Presupuesto</text> </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sección Principal: Tarjetas de las 3 Aplicaciones -->
+    <main id="herramientas" class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+        <div> <span class="text-xs font-mono uppercase tracking-wider text-terracotta-600 font-bold">Módulos
+            Disponibles</span>
+          <h2 class="text-2xl font-bold text-kraft-900 mt-1">Aplicaciones del
+            Estudio</h2>
+        </div>
+        <span class="text-xs font-mono bg-kraft-200/80 text-kraft-800 px-3 py-1.5 rounded-lg border border-kraft-300">
+          Directorio: <code class="font-bold">/apps/</code> </span> </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- APP 1: Calculadora Packaging Piramidal -->
+        <article class="bg-kraft-50 rounded-2xl border border-kraft-200 shadow-sm hover:shadow-md hover:border-terracotta-500/60 transition-all flex flex-col overflow-hidden group">
+          <div class="p-6 flex-grow flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-kraft-900 text-kraft-50 flex items-center justify-center shadow-sm group-hover:bg-terracotta-500 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 3L3 19h18L12 3zm-4.5 11h9m-6.5-4h4"></path> </svg> </div>
+              <span class="text-xs font-mono font-bold bg-kraft-200 text-kraft-800 px-2.5 py-1 rounded-md">PASO
+                01</span> </div>
+            <h3 class="text-lg font-bold text-kraft-900 group-hover:text-terracotta-600 transition-colors">
+              Calculadora Packaging Piramidal </h3>
+            <p class="text-xs font-mono text-blueprint-600 mt-1">Bandejas
+              apilables y cierre superior</p>
+            <p class="text-sm text-kraft-700 mt-3 leading-relaxed flex-grow">
+              Genera los planos de corte 2D y doblez para torres piramidales de
+              1 a 8 pisos con paredes huecas inclinadas, calculando cada nivel y
+              exportando la ficha técnica lista para imprimir o compartir. </p>
+            <ul class="mt-4 pt-4 border-t border-kraft-200 space-y-1.5 text-xs text-kraft-700 font-mono">
+              <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-terracotta-500"></span>
+                Troquelado 2D nivel por nivel </li>
+              <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-terracotta-500"></span>
+                Alzado lateral armado a escala </li>
+              <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-terracotta-500"></span>
+                Exportación de ficha de medidas </li>
+            </ul>
+          </div>
+          <div class="px-6 py-4 bg-white border-t border-kraft-200"> <a href="file:///C:/Users/Esteban%20Gudi%C3%B1o/Desktop/nuevas%20aplis/calcu%20packaging/apps/calculadora-packaging-piramidal.html.html"
+              class="w-full py-2.5 px-4 rounded-xl bg-kraft-900 hover:bg-terracotta-500 text-white text-sm font-semibold transition-colors flex items-center justify-center gap-2 shadow-sm">
+              <span>Abrir Calculadora Base</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"></path> </svg> </a> </div>
+        </article>
+        <!-- APP 2: Calculadora Tapa Piramidal -->
+        <article class="bg-kraft-50 rounded-2xl border border-kraft-200 shadow-sm hover:shadow-md hover:border-terracotta-500/60 transition-all flex flex-col overflow-hidden group">
+          <div class="p-6 flex-grow flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-terracotta-500 text-white flex items-center justify-center shadow-sm">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 2L3 20h18L12 2zm-2.5 6.5h5"></path> </svg> </div>
+              <span class="text-xs font-mono font-bold bg-terracotta-500/10 text-terracotta-600 px-2.5 py-1 rounded-md border border-terracotta-500/20">PASO
+                02</span> </div>
+            <h3 class="text-lg font-bold text-kraft-900 group-hover:text-terracotta-600 transition-colors">
+              Calculadora Tapa Piramidal </h3>
+            <p class="text-xs font-mono text-blueprint-600 mt-1">Campana
+              completa y pirámide truncada</p>
+            <p class="text-sm text-kraft-700 mt-3 leading-relaxed flex-grow">
+              Calcula la tapa exterior encastrable a partir de la caja armada o
+              importando directamente el archivo Word (<code class="font-mono text-xs bg-kraft-200 px-1 rounded">.docx</code>).
+              Permite alternar entre pirámide completa con asa o truncada con
+              techo plano. </p>
+            <ul class="mt-4 pt-4 border-t border-kraft-200 space-y-1.5 text-xs text-kraft-700 font-mono">
+              <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-blueprint-500"></span>
+                Importación directa de ficha Word </li>
+              <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-blueprint-500"></span>
+                Modo Completa o Truncada </li>
+              <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-blueprint-500"></span>
+                Despiece en 1, 2 o 4 piezas </li>
+            </ul>
+          </div>
+          <div class="px-6 py-4 bg-white border-t border-kraft-200"> <a href="file:///C:/Users/Esteban%20Gudi%C3%B1o/Desktop/nuevas%20aplis/calcu%20packaging/apps/calculadora-tapa-piramidal.html.html"
+              class="w-full py-2.5 px-4 rounded-xl bg-terracotta-500 hover:bg-terracotta-600 text-white text-sm font-semibold transition-colors flex items-center justify-center gap-2 shadow-sm">
+              <span>Abrir Calculadora de Tapa</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"></path> </svg> </a> </div>
+        </article>
+        <!-- APP 3: Presupuestador Packaging Piramidal -->
+        <article class="bg-kraft-50 rounded-2xl border border-kraft-200 shadow-sm hover:shadow-md hover:border-terracotta-500/60 transition-all flex flex-col overflow-hidden group">
+          <div class="p-6 flex-grow flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-blueprint-600 text-white flex items-center justify-center shadow-sm group-hover:bg-terracotta-500 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg> </div>
+              <span class="text-xs font-mono font-bold bg-blueprint-50 text-blueprint-600 px-2.5 py-1 rounded-md border border-blue-200">PASO
+                03</span> </div>
+            <h3 class="text-lg font-bold text-kraft-900 group-hover:text-terracotta-600 transition-colors">
+              Presupuestador Packaging Piramidal </h3>
+            <p class="text-xs font-mono text-blueprint-600 mt-1">Cotización de
+              pliegos, insumos y mano de obra</p>
+            <p class="text-sm text-kraft-700 mt-3 leading-relaxed flex-grow">
+              Calcula el rendimiento de cartulina por pliego comercial, consumo
+              de adhesivos, cintas, tiempos de corte y armado, márgenes de
+              ganancia y precio final unitario o por lote para clientes. </p>
+            <ul class="mt-4 pt-4 border-t border-kraft-200 space-y-1.5 text-xs text-kraft-700 font-mono">
+              <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-terracotta-500"></span>
+                Aprovechamiento de pliegos </li>
+              <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-terracotta-500"></span>
+                Costos directos e indirectos </li>
+              <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-terracotta-500"></span>
+                Cotización por escala de cantidad </li>
+            </ul>
+          </div>
+          <div class="px-6 py-4 bg-white border-t border-kraft-200"> <a href="file:///C:/Users/Esteban%20Gudi%C3%B1o/Desktop/nuevas%20aplis/calcu%20packaging/apps/presupuestador-packaging-piramidal.html.html"
+              class="w-full py-2.5 px-4 rounded-xl bg-kraft-900 hover:bg-terracotta-500 text-white text-sm font-semibold transition-colors flex items-center justify-center gap-2 shadow-sm">
+              <span>Abrir Presupuestador</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"></path> </svg> </a> </div>
+        </article>
+      </div>
+      <!-- Flujo de Trabajo Recomendado -->
+      <section id="flujo-trabajo" class="mt-12 bg-white rounded-2xl p-6 sm:p-7 border border-kraft-200 shadow-sm">
+        <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-5 border-b border-kraft-200">
+          <h3 class="text-base font-bold text-kraft-900 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-terracotta-500"></span>
+            Flujo de Trabajo Integrado </h3>
+          <span class="text-xs font-mono text-kraft-500">De la idea al
+            presupuesto final</span> </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-kraft-700 leading-relaxed">
+          <div class="flex items-start gap-3"> <span class="w-7 h-7 rounded-lg bg-kraft-100 border border-kraft-300 font-mono font-bold text-kraft-900 flex items-center justify-center shrink-0">1</span>
+            <div> <strong class="text-sm text-kraft-900 block mb-1">Definí la
+                torre de bandejas</strong> Ingresá el papel base y cantidad de
+              pisos en <em>Calculadora Packaging Piramidal</em> para obtener
+              las dimensiones exactas de cada bandeja armada y guardar la ficha
+              de corte. </div>
+          </div>
+          <div class="flex items-start gap-3"> <span class="w-7 h-7 rounded-lg bg-kraft-100 border border-kraft-300 font-mono font-bold text-kraft-900 flex items-center justify-center shrink-0">2</span>
+            <div> <strong class="text-sm text-kraft-900 block mb-1">Generá la
+                tapa a medida</strong> Cargá los datos de la caja armada en <em>Calculadora
+                Tapa Piramidal</em> (manualmente o subiendo el Word) y elegí
+              entre tapa completa en punta o truncada con techo plano. </div>
+          </div>
+          <div class="flex items-start gap-3"> <span class="w-7 h-7 rounded-lg bg-kraft-100 border border-kraft-300 font-mono font-bold text-kraft-900 flex items-center justify-center shrink-0">3</span>
+            <div> <strong class="text-sm text-kraft-900 block mb-1">Calculá
+                costos y rentabilidad</strong> Con los pliegos mínimos obtenidos
+              en ambos planos, ingresá al <em>Presupuestador Packaging
+                Piramidal</em> para cotizar materiales, corte, armado y precio
+              de venta. </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer y Contacto del Desarrollador -->
+    <footer id="contacto" class="bg-kraft-900 text-kraft-200 border-t border-kraft-800 mt-auto">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-7 space-y-2">
+            <div class="flex items-center gap-2.5"> <span class="w-2.5 h-2.5 rounded-full bg-terracotta-500"></span>
+              <span class="text-xs font-mono uppercase tracking-wider text-kraft-400">Desarrollo
+                &amp; Ingeniería de Software</span> </div>
+            <h2 class="text-xl font-bold text-white">Esteban Manuel Gudiño
+              Acevedo</h2>
+            <p class="text-sm text-kraft-300 max-w-xl leading-relaxed">
+              Consultas técnicas, desarrollos a medida de calculadoras de
+              troquelado, automatización de presupuestos gráficos y soporte
+              sobre Packaging Piramidal Studio. </p>
+          </div>
+          <div class="md:col-span-5">
+            <div class="bg-kraft-800/80 border border-kraft-700 rounded-2xl p-5 space-y-3">
+              <span class="text-xs font-mono uppercase tracking-wider text-kraft-400 block">Contacto
+                Directo</span>
+              <div class="flex items-center justify-between gap-2 bg-kraft-900/90 px-3.5 py-2.5 rounded-xl border border-kraft-700">
+                <a href="mailto:ceakairos@gmail.com" class="font-mono text-sm font-semibold text-white hover:text-terracotta-500 transition-colors truncate">
+                  ceakairos@gmail.com </a> <button type="button" onclick="copyEmail()"
+                  class="px-2.5 py-1 text-xs font-medium bg-kraft-700 hover:bg-terracotta-500 text-white rounded-lg transition-colors shrink-0">
+                  Copiar </button> </div>
+              <div class="pt-1 flex flex-wrap gap-2"> <a href="mailto:ceakairos@gmail.com?subject=Consulta%20-%20Packaging%20Piramidal%20Studio"
+                  class="w-full py-2.5 px-4 rounded-xl bg-terracotta-500 hover:bg-terracotta-600 text-white text-xs sm:text-sm font-semibold transition-colors flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg> Enviar Correo Electrónico </a> </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-kraft-800 flex flex-wrap items-center justify-between gap-4 text-xs text-kraft-400 font-mono">
+          <span>© 2026 Packaging Piramidal Studio — Todos los derechos
+            reservados.</span> <span>Desarrollado por Esteban Manuel Gudiño
+            Acevedo</span> </div>
+      </div>
+    </footer>
+    <script>
+      function copyEmail() {
+        const email = 'ceakairos@gmail.com';
+        const ta = document.createElement('textarea');
+        ta.value = email;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+          const toast = document.getElementById('toast');
+          document.getElementById('toast-message').textContent = 'Email copiado: ' + email;
+          toast.classList.remove('translate-y-20', 'opacity-0');
+          setTimeout(() => {
+            toast.classList.add('translate-y-20', 'opacity-0');
+          }, 2600);
+        } catch (err) {
+          console.error('No se pudo copiar el correo', err);
+        }
+        document.body.removeChild(ta);
+      }
+    </script>
+  </body>
+</html>
